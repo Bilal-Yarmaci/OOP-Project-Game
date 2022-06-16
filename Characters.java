@@ -1,9 +1,8 @@
-
 public class Characters {
 	private String name;
 	private int id;
 	private boolean active;
-	
+
 	public Characters(String name, int id) {	
 		this.name=name;
 		this.id=id;
@@ -25,5 +24,4 @@ public class Characters {
 	public int getId() {		//Method to get private id variable.
 		return id;
 	}
-
 }

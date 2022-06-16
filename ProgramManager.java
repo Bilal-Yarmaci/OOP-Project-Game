@@ -44,7 +44,6 @@ public class ProgramManager {
 					System.out.print("Please enter a digit! ");
 					sc.nextLine();
 				}
-				
 			}
 			
 			switch (chose) {		//A switch-case structure that performs the operations of the menu selection.
@@ -102,7 +101,7 @@ public class ProgramManager {
 						we.setWarriors();														//Getting the indexes of hitter knight and the hit enemy.
 						we.attack(gd.getActiveKnights(), gd.getEnemies());						//Related method.
 						if(gd.getActiveKnights().size()==0&&gd.getEnemies().size()!=0) {		//If the activeKnights array is empty and the Enemies array is not, it means that the player has lost the game.
-							System.out.println("GAME OVER!\nYOU WERE DEFEATED.");
+							System.out.println("You have no knights left. Game over.\nYOU LOST!");
 							break;
 						}
 						else if (gd.getActiveKnights().size()!=0&&gd.getEnemies().size()==0) {	//If both arrays are empty, the last knight has defeated the last enemy.

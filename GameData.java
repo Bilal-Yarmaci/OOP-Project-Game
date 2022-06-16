@@ -7,8 +7,7 @@ public class GameData {
 	private ArrayList<Enemy> activeEnemies = new ArrayList<>();
 	private ArrayList<Luck> luck = new ArrayList<>();
 	
-	public GameData(){
-		
+	public GameData(){	
 	}
 	
 	public ArrayList<Knight> getKnights(){
@@ -47,10 +46,5 @@ public class GameData {
 	public void addEnemy(String name, int id, int index) {	//Method described to ease adding enemies to game data.
 		enemies.add(new Enemy(name,id));
 		activeEnemies.add(enemies.get(index));
-	}
-	
-	
+	}	
 }
-
-
-

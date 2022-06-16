@@ -54,5 +54,4 @@ public class CSVGameData extends GameData {
 			ex.printStackTrace();
 		}
 	}
-	
 }

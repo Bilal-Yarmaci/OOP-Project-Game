@@ -1,5 +1,6 @@
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class WarEngine {
 	
@@ -15,11 +16,20 @@ public class WarEngine {
 	}
 	
 	public void setWarriors() {			//Gets indexes of hitter knight and the hit enemy.
-		System.out.println("Knight number: ");
-		kIndex = (byte) (input.nextInt()-1);
-		System.out.println("Enemy number: ");
-		eIndex = (byte) (input.nextInt()-1);
-		
+		while(true) {							//A method that runs until a digit is entered. 
+			try {
+				System.out.print("Knight number: ");
+				kIndex = (byte) (input.nextInt()-1);
+				input.nextLine();
+				System.out.print("Enemy number: ");
+				eIndex = (byte) (input.nextInt()-1);
+				input.nextLine();
+				break;
+			} catch (InputMismatchException e) {
+				System.out.println("Please enter a digit!");
+				input.nextLine();
+			}
+		}
 	}
 	
 	public void attack(ArrayList<Knight> activeKnights, ArrayList<Enemy> Enemies) {	

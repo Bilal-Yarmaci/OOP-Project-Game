@@ -1,4 +1,3 @@
-
 public class Enemy extends Characters{
 	private String enemyType;
 	

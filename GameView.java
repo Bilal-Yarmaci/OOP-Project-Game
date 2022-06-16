@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class GameView {
 	
 	public GameView(){
-		
 	}
 	
 	public void startScreen() {
