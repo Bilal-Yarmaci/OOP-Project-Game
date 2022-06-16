@@ -16,17 +16,20 @@ public class WarEngine {
 	}
 	
 	public void setWarriors() {			//Gets indexes of hitter knight and the hit enemy.
-		while(true) {							//A method that runs until a digit is entered. 
+		//A method that runs until an available character number is entered. 
+		while(true) {							
 			try {
 				System.out.print("Knight number: ");
 				kIndex = (byte) (input.nextInt()-1);
 				input.nextLine();
 				System.out.print("Enemy number: ");
 				eIndex = (byte) (input.nextInt()-1);
+				if(kIndex<0||eIndex<0)
+					throw new InputMismatchException();
 				input.nextLine();
 				break;
 			} catch (InputMismatchException e) {
-				System.out.println("Please enter a digit!");
+				System.out.println("Please enter a digit from the list!");
 				input.nextLine();
 			}
 		}
