@@ -1,4 +1,4 @@
-# OOP-Project-Game
+# OOP Game Project
 Play the game online here: https://replit.com/@BilalYarmaci/OOP-Project-Game
 
 This is a console-based game.
